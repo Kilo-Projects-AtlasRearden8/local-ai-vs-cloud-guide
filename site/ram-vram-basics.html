@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RAM &amp; VRAM Basics — Running AI Locally vs. Cloud</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="inner">
+    <a href="index.html" class="site-brand">Asdale<span class="emph">Dynamics</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Open menu">&#9776;</button>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="choosing-models.html">Choosing models</a>
+      <a href="ram-vram-basics.html">RAM &amp; VRAM basics</a>
+      <a href="ollama-setup.html">Ollama setup</a>
+      <a href="lm-studio-setup.html">LM Studio setup</a>
+      <a href="privacy-benefits.html">Privacy benefits</a>
+      <a href="cost-comparison.html">Cost comparison</a>
+      <a href="when-to-use-each.html">When to use each</a>
+      <a href="glossary.html">Glossary</a>
+    </nav>
+  </div>
+</header>
+<div class="container">
+  <nav class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="choosing-models.html">Choosing models</a>
+    <a href="ram-vram-basics.html">RAM &amp; VRAM basics</a>
+    <a href="ollama-setup.html">Ollama setup</a>
+    <a href="lm-studio-setup.html">LM Studio setup</a>
+    <a href="privacy-benefits.html">Privacy benefits</a>
+    <a href="cost-comparison.html">Cost comparison</a>
+    <a href="when-to-use-each.html">When to use each</a>
+    <a href="glossary.html">Glossary</a>
+  </nav>
+
+  <main>
+    <h1>RAM and VRAM Basics</h1>
+    <p>To run AI locally you need two things to understand: <strong>RAM</strong>
+    (your computer's general working memory) and <strong>VRAM</strong> (memory
+    on your graphics card, if you have one). This section explains both in
+    plain English and how to tell what your computer has.</p>
+
+    <h2>RAM vs. VRAM</h2>
+    <table>
+      <thead>
+        <tr><th></th><th>What it is</th><th>Where it lives</th><th>What AI uses it for</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>RAM</strong></td><td>Main system memory</td><td>On the motherboard / CPU chips</td><td>Running the model, your OS, apps</td></tr>
+        <tr><td><strong>VRAM</strong></td><td>Graphics card memory</td><td>On the GPU (graphics card)</td><td>Running the model faster, if available</td></tr>
+      </tbody>
+    </table>
+    <p>If your computer has a graphics card with VRAM, AI can use it and run
+    much faster. If not, AI runs on RAM and the CPU — slower, but still
+    perfectly usable for small models.</p>
+
+    <h2>How to check what you have</h2>
+    <h3>Windows</h3>
+    <ol>
+      <li>Press <code>Ctrl + Shift + Esc</code> to open Task Manager.</li>
+      <li>Click the <strong>Performance</strong> tab.</li>
+      <li><strong>Memory</strong> shows your total RAM and how much is in use.</li>
+      <li><strong>GPU</strong> shows your graphics card and its dedicated memory (VRAM).</li>
+    </ol>
+    <h3>macOS</h3>
+    <ol>
+      <li>Click the Apple menu → <strong>About This Mac</strong> → <strong>More Info</strong> / <strong>System Report</strong>.</li>
+      <li><strong>Memory</strong> shows total RAM. On Apple Silicon (M1/M2/M3/M4 Macs), RAM and VRAM are shared — the system can use RAM for graphics, which is great for local AI.</li>
+      <li>Or in Terminal: <code>sysctl -n hw.memsize</code> shows total RAM in bytes.</li>
+    </ol>
+    <h3>Linux</h3>
+    <ol>
+      <li>RAM: <code>free -h</code></li>
+      <li>GPU/VRAM: <code>lspci | grep -i vga</code> or <code>nvidia-smi</code> if you have an NVIDIA card.</li>
+    </ol>
+
+    <h2>How much memory do you need?</h2>
+    <p>A rough rule: a model needs about <strong>1 byte per parameter</strong>,
+    plus some overhead. So a 7B parameter model needs roughly 7–9 GB of free
+    memory to run comfortably.</p>
+    <table>
+      <thead>
+        <tr><th>Free memory (RAM or VRAM)</th><th>Comfortable model size</th><th>What it runs well</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>4 GB</td><td>1B – 3B (Q4)</td><td>Simple chat, rewriting, summaries</td></tr>
+        <tr><td>8 GB</td><td>7B – 8B (Q4/Q5)</td><td>Everyday AI: emails, docs, coding help</td></tr>
+        <tr><td>16 GB</td><td>13B – 14B (Q4/Q5)</td><td>Stronger reasoning, longer documents</td></tr>
+        <tr><td>24 GB+</td><td>33B – 70B (Q4)</td><td>Advanced reasoning, complex coding</td></tr>
+      </tbody>
+    </table>
+    <p>These are estimates. Your operating system and browser also use RAM, so
+    leave a couple of gigabytes free.</p>
+
+    <h2>What slows things down</h2>
+    <ul>
+      <li><strong>Not enough free memory:</strong> the computer swaps to disk,
+      and AI gets very slow. Close other apps before running a big model.</li>
+      <li><strong>No GPU/VRAM:</strong> CPU-only is fine for small models, but
+      responses take longer (seconds to minutes instead of under a second).</li>
+      <li><strong>Large context:</strong> feeding the model very long
+      documents uses more memory.</li>
+    </ul>
+
+    <h2>Practical tips</h2>
+    <ol>
+      <li>Close browser tabs and heavy apps before loading a model.</li>
+      <li>Start with a small quantized model (Q4_K_M, 3B–8B).</li>
+      <li>If your computer has 8 GB of RAM, stick to 3B–7B models at first.</li>
+      <li>On a Mac with unified memory, local AI often works better than on a
+      Windows PC with the same RAM number, because the graphics chip can
+      share the same memory.</li>
+    </ol>
+  </main>
+</div>
+<footer class="site-footer">
+  <div class="inner">
+    <p>&copy; 2026 <strong>Asdale Dynamics, LLC</strong>. MIT License.
+    <a href="../LICENSE">View license</a>.</p>
+    <p class="disclaimer">Educational purposes only. This manual is not
+    medical advice.</p>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

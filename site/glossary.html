@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glossary — Running AI Locally vs. Cloud</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="inner">
+    <a href="index.html" class="site-brand">Asdale<span class="emph">Dynamics</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Open menu">&#9776;</button>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="choosing-models.html">Choosing models</a>
+      <a href="ram-vram-basics.html">RAM &amp; VRAM basics</a>
+      <a href="ollama-setup.html">Ollama setup</a>
+      <a href="lm-studio-setup.html">LM Studio setup</a>
+      <a href="privacy-benefits.html">Privacy benefits</a>
+      <a href="cost-comparison.html">Cost comparison</a>
+      <a href="when-to-use-each.html">When to use each</a>
+      <a href="glossary.html">Glossary</a>
+    </nav>
+  </div>
+</header>
+<div class="container">
+  <nav class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="choosing-models.html">Choosing models</a>
+    <a href="ram-vram-basics.html">RAM &amp; VRAM basics</a>
+    <a href="ollama-setup.html">Ollama setup</a>
+    <a href="lm-studio-setup.html">LM Studio setup</a>
+    <a href="privacy-benefits.html">Privacy benefits</a>
+    <a href="cost-comparison.html">Cost comparison</a>
+    <a href="when-to-use-each.html">When to use each</a>
+    <a href="glossary.html">Glossary</a>
+  </nav>
+
+  <main>
+    <h1>Glossary</h1>
+    <p>Plain-English definitions for terms used in this manual.</p>
+    <table>
+      <thead>
+        <tr><th>Term</th><th>Meaning</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>API key</strong></td><td>A secret code that lets a program talk to an online service. You don't need one for local AI.</td></tr>
+        <tr><td><strong>Cloud</strong></td><td>Someone else's computers, accessed over the internet.</td></tr>
+        <tr><td><strong>Context</strong></td><td>The text (prompt plus earlier messages) the model considers when answering. Longer context uses more memory.</td></tr>
+        <tr><td><strong>GGUF</strong></td><td>A file format for AI models that runs well on consumer hardware. Used by Ollama and LM Studio.</td></tr>
+        <tr><td><strong>Instruct / chat model</strong></td><td>A model trained to follow instructions and hold a conversation, as opposed to a raw "base" model that just completes text.</td></tr>
+        <tr><td><strong>LLM</strong></td><td>Large language model. An AI trained on lots of text that can write, summarize, code, and chat.</td></tr>
+        <tr><td><strong>Local</strong></td><td>Running on your own computer, with nothing sent over the internet to use the model.</td></tr>
+        <tr><td><strong>Parameter</strong></td><td>One of the billions of adjustable values inside a trained model. More parameters usually mean a smarter but bigger model.</td></tr>
+        <tr><td><strong>Quantization</strong></td><td>Compressing a model to a smaller file (Q4, Q5, Q6, etc.) with a small trade-off in quality.</td></tr>
+        <tr><td><strong>RAM</strong></td><td>Your computer's main working memory.</td></tr>
+        <tr><td><strong>VRAM</strong></td><td>Memory on a graphics card, used to run AI models faster.</td></tr>
+        <tr><td><strong>Token</strong></td><td>A chunk of text (part of a word) that models read and write. Roughly 1,000 tokens ≈ 750 words.</td></tr>
+      </tbody>
+    </table>
+  </main>
+</div>
+<footer class="site-footer">
+  <div class="inner">
+    <p>&copy; 2026 <strong>Asdale Dynamics, LLC</strong>. MIT License.
+    <a href="../LICENSE">View license</a>.</p>
+    <p class="disclaimer">Educational purposes only. This manual is not
+    medical advice.</p>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

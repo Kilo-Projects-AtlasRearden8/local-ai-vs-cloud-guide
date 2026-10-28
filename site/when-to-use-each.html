@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>When to Use Each — Running AI Locally vs. Cloud</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="inner">
+    <a href="index.html" class="site-brand">Asdale<span class="emph">Dynamics</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Open menu">&#9776;</button>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="choosing-models.html">Choosing models</a>
+      <a href="ram-vram-basics.html">RAM &amp; VRAM basics</a>
+      <a href="ollama-setup.html">Ollama setup</a>
+      <a href="lm-studio-setup.html">LM Studio setup</a>
+      <a href="privacy-benefits.html">Privacy benefits</a>
+      <a href="cost-comparison.html">Cost comparison</a>
+      <a href="when-to-use-each.html">When to use each</a>
+      <a href="glossary.html">Glossary</a>
+    </nav>
+  </div>
+</header>
+<div class="container">
+  <nav class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="choosing-models.html">Choosing models</a>
+    <a href="ram-vram-basics.html">RAM &amp; VRAM basics</a>
+    <a href="ollama-setup.html">Ollama setup</a>
+    <a href="lm-studio-setup.html">LM Studio setup</a>
+    <a href="privacy-benefits.html">Privacy benefits</a>
+    <a href="cost-comparison.html">Cost comparison</a>
+    <a href="when-to-use-each.html">When to use each</a>
+    <a href="glossary.html">Glossary</a>
+  </nav>
+
+  <main>
+    <h1>When to Use Each</h1>
+    <p>You don't have to pick one forever. Most people use both. Here is a
+    simple guide to help you choose in the moment.</p>
+
+    <h2>Use local AI (Ollama or LM Studio) when</h2>
+    <ul>
+      <li>Privacy matters: personal notes, client information, business drafts</li>
+      <li>You don't want an account, API key, or subscription</li>
+      <li>You're offline or on spotty internet</li>
+      <li>You're doing everyday tasks: rewriting, summarizing, simple Q&amp;A, drafting</li>
+      <li>You want to practice and learn without paying</li>
+      <li>You're running repeated tasks on the same computer</li>
+    </ul>
+
+    <h2>Use cloud AI when</h2>
+    <ul>
+      <li>You need a very large model your computer can't run</li>
+      <li>You're away from your computer and only have a phone</li>
+      <li>You need web browsing built into the answer</li>
+      <li>You're doing occasional hard reasoning or complex coding</li>
+      <li>You're collaborating with others through a shared cloud workspace</li>
+    </ul>
+
+    <h2>Quick decision flowchart</h2>
+    <pre><code>Do you need this answer private or sensitive?
+├── Yes → Use local AI
+└── No → Continue
+
+Is your computer able to run a 7B–8B model comfortably?
+├── Yes → Try local first
+└── No → Use cloud or upgrade later
+
+Is the task very hard (complex code, deep research)?
+├── Yes → Consider cloud for this one task
+└── No → Use local AI</code></pre>
+
+    <section class="card tip">
+      <strong>Suggested starter routine:</strong><br>
+      1. <strong>Every day:</strong> local AI for emails, drafting,
+      summaries, learning.<br>
+      2. <strong>Once in a while:</strong> cloud AI for a hard problem your
+      local model can't handle.<br>
+      3. <strong>Always:</strong> keep sensitive text local.<br><br>
+      Both tools are free to try. Start local, add cloud only when you need it.
+    </section>
+  </main>
+</div>
+<footer class="site-footer">
+  <div class="inner">
+    <p>&copy; 2026 <strong>Asdale Dynamics, LLC</strong>. MIT License.
+    <a href="../LICENSE">View license</a>.</p>
+    <p class="disclaimer">Educational purposes only. This manual is not
+    medical advice.</p>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

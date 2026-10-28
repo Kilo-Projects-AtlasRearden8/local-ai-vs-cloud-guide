@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cost Comparison — Running AI Locally vs. Cloud</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="inner">
+    <a href="index.html" class="site-brand">Asdale<span class="emph">Dynamics</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Open menu">&#9776;</button>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="choosing-models.html">Choosing models</a>
+      <a href="ram-vram-basics.html">RAM &amp; VRAM basics</a>
+      <a href="ollama-setup.html">Ollama setup</a>
+      <a href="lm-studio-setup.html">LM Studio setup</a>
+      <a href="privacy-benefits.html">Privacy benefits</a>
+      <a href="cost-comparison.html">Cost comparison</a>
+      <a href="when-to-use-each.html">When to use each</a>
+      <a href="glossary.html">Glossary</a>
+    </nav>
+  </div>
+</header>
+<div class="container">
+  <nav class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="choosing-models.html">Choosing models</a>
+    <a href="ram-vram-basics.html">RAM &amp; VRAM basics</a>
+    <a href="ollama-setup.html">Ollama setup</a>
+    <a href="lm-studio-setup.html">LM Studio setup</a>
+    <a href="privacy-benefits.html">Privacy benefits</a>
+    <a href="cost-comparison.html">Cost comparison</a>
+    <a href="when-to-use-each.html">When to use each</a>
+    <a href="glossary.html">Glossary</a>
+  </nav>
+
+  <main>
+    <h1>Cost Comparison</h1>
+    <p>Local AI and cloud AI cost money in different ways. This section
+    breaks both down with real-world examples so you can decide what fits
+    your budget.</p>
+
+    <h2>Local AI costs</h2>
+    <table>
+      <thead>
+        <tr><th>Cost</th><th>What it is</th><th>Typical price</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Software</td><td>Ollama, LM Studio</td><td>Free</td></tr>
+        <tr><td>Models</td><td>Downloads from public libraries</td><td>Free</td></tr>
+        <tr><td>Electricity</td><td>Running your computer</td><td>A few cents per session</td></tr>
+        <tr><td>Hardware</td><td>Computer you already own</td><td>$0 if you have one; otherwise the cost of the machine</td></tr>
+      </tbody>
+    </table>
+    <div class="card tip">
+      <strong>Bottom line:</strong> after you have a computer, local AI costs
+      essentially nothing to run — no subscription, no per-message fee, no
+      API key.
+    </div>
+    <p>The one hidden cost is hardware: if your computer can't run the model
+    you want, you may need more RAM or a better graphics card. But you can
+    always run a smaller model on what you have.</p>
+
+    <h2>Cloud AI costs</h2>
+    <table>
+      <thead>
+        <tr><th>Cost</th><th>What it is</th><th>Typical price</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Subscription</td><td>Chatbot Plus/Pro plans</td><td>~$20/month</td></tr>
+        <tr><td>API usage</td><td>Pay per 1,000 words (tokens)</td><td>Varies; a few dollars can go far</td></tr>
+        <tr><td>Account</td><td>Often required</td><td>Free to sign up, paid to use heavily</td></tr>
+      </tbody>
+    </table>
+    <p>Cloud AI is cheap for light use and can add up if you use it heavily
+    every day. A casual user might spend $0–$20/month; a power user can spend
+    much more.</p>
+
+    <h2>Real-world examples</h2>
+    <table>
+      <thead>
+        <tr><th>Scenario</th><th>Local AI</th><th>Cloud AI</th><th>Winner</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Occasional writer — emails and blog posts a few times a week</td><td>Free; download a 7B model, run it on your laptop</td><td>Free tier may cover it, or ~$0–$20/month</td><td>Local (free, private, no account)</td></tr>
+        <tr><td>Small business owner — customer feedback and proposals daily</td><td>Free on an 8–16 GB laptop with an 8B model</td><td>~$20/month subscription plus possible API fees</td><td>Local for everyday work; cloud occasionally for harder tasks</td></tr>
+        <tr><td>Complex coding or research — very large model once in a while</td><td>May not run well on your hardware; buying a GPU is expensive</td><td>Pay only for the hours or tokens you use</td><td>Cloud for the occasional heavy job, local for daily work</td></tr>
+      </tbody>
+    </table>
+
+    <h2>The hybrid approach (recommended)</h2>
+    <p>Use local AI for daily, private, repetitive tasks. Use cloud AI
+    occasionally for harder reasoning or when you're away from your computer.
+    You get privacy and low cost most of the time, with power when you need
+    it.</p>
+  </main>
+</div>
+<footer class="site-footer">
+  <div class="inner">
+    <p>&copy; 2026 <strong>Asdale Dynamics, LLC</strong>. MIT License.
+    <a href="../LICENSE">View license</a>.</p>
+    <p class="disclaimer">Educational purposes only. This manual is not
+    medical advice.</p>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Choosing Models — Running AI Locally vs. Cloud</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="inner">
+    <a href="index.html" class="site-brand">Asdale<span class="emph">Dynamics</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Open menu">&#9776;</button>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="choosing-models.html">Choosing models</a>
+      <a href="ram-vram-basics.html">RAM &amp; VRAM basics</a>
+      <a href="ollama-setup.html">Ollama setup</a>
+      <a href="lm-studio-setup.html">LM Studio setup</a>
+      <a href="privacy-benefits.html">Privacy benefits</a>
+      <a href="cost-comparison.html">Cost comparison</a>
+      <a href="when-to-use-each.html">When to use each</a>
+      <a href="glossary.html">Glossary</a>
+    </nav>
+  </div>
+</header>
+<div class="container">
+  <nav class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="choosing-models.html">Choosing models</a>
+    <a href="ram-vram-basics.html">RAM &amp; VRAM basics</a>
+    <a href="ollama-setup.html">Ollama setup</a>
+    <a href="lm-studio-setup.html">LM Studio setup</a>
+    <a href="privacy-benefits.html">Privacy benefits</a>
+    <a href="cost-comparison.html">Cost comparison</a>
+    <a href="when-to-use-each.html">When to use each</a>
+    <a href="glossary.html">Glossary</a>
+  </nav>
+
+  <main>
+    <h1>Choosing Models</h1>
+    <p>Picking an AI model feels like picking a car: there are dozens of
+    options, they all have numbers nobody explains, and the wrong choice
+    costs you time or money. This section keeps it simple.</p>
+
+    <h2>The big split: local models vs. cloud models</h2>
+    <ul>
+      <li><strong>Local models</strong> run on your own computer. Nothing
+      leaves your machine. Examples: models you download through Ollama or
+      LM Studio.</li>
+      <li><strong>Cloud models</strong> run on someone else's servers. You
+      send your text over the internet and get an answer back. Examples: the
+      models behind popular chatbot websites and APIs.</li>
+    </ul>
+    <p>This manual focuses on <strong>local-first</strong> because it needs no
+    API key, no account, and no subscription — but cloud still has its place,
+    and we cover when to use it later.</p>
+
+    <h2>Model sizes, in plain English</h2>
+    <p>Models are sized by "parameters" — roughly, how many adjustable knobs
+    the model learned during training. You'll see them written with a "B"
+    (billion).</p>
+    <table>
+      <thead>
+        <tr><th>Size</th><th>Rough parameters</th><th>What it's good for</th><th>Typical RAM/VRAM need</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Small</td><td>1B – 3B</td><td>Simple Q&amp;A, rewriting, summaries, chat on old laptops</td><td>~2–4 GB</td></tr>
+        <tr><td>Medium</td><td>7B – 9B</td><td>Most everyday tasks: emails, docs, coding help, analysis</td><td>~5–8 GB</td></tr>
+        <tr><td>Large</td><td>13B – 35B</td><td>Harder reasoning, long documents, better coding</td><td>~9–20 GB</td></tr>
+        <tr><td>Very large</td><td>70B+</td><td>Expert-level reasoning, complex code</td><td>~40 GB+</td></tr>
+      </tbody>
+    </table>
+    <div class="card tip">
+      <strong>Beginner advice:</strong> start with a 7B or 8B model (for
+      example, a 7B or 8B "instruct" or "chat" model). It runs well on most
+      computers with 8–16 GB of RAM and handles almost everything a beginner
+      needs.
+    </div>
+
+    <h2>Quantization: smaller files, almost the same smarts</h2>
+    <p>You'll see names like <code>Q4_K_M</code>, <code>Q5_K_M</code>, or
+    <code>fp16</code>. These describe how the model is compressed.</p>
+    <ul>
+      <li><strong>fp16 / f16:</strong> least compressed, biggest file,
+      highest quality. Needs lots of memory.</li>
+      <li><strong>Q4_K_M / Q4_0:</strong> heavily compressed, much smaller
+      file, quality is usually close enough for everyday use.</li>
+      <li><strong>Q5_K_M / Q6_K:</strong> middle ground — slightly bigger
+      than Q4, slightly better quality.</li>
+    </ul>
+    <div class="card tip">
+      <strong>Beginner advice:</strong> download <code>Q4_K_M</code> or
+      <code>Q5_K_M</code> first. If answers feel dull, try <code>Q6_K</code>
+      or a larger model.
+    </div>
+
+    <h2>Where to find models</h2>
+    <ul>
+      <li><strong>Ollama Library</strong> (ollama.com/library) — models ready
+      to run with Ollama.</li>
+      <li><strong>Hugging Face</strong> (huggingface.co/models) — the biggest
+      public model library; look for GGUF-format files if you plan to run
+      them locally.</li>
+      <li><strong>LM Studio</strong> has a built-in model browser that
+      downloads Hugging Face models for you.</li>
+    </ul>
+
+    <h2>What to avoid as a beginner</h2>
+    <ul>
+      <li>Don't start with a 70B+ model unless your computer has serious GPU
+      memory (24 GB+ VRAM). It will be slow or won't run at all.</li>
+      <li>Don't pay for a model subscription before you've tried a free local
+      model.</li>
+      <li>Don't worry about "the best" model — any small instruct model will
+      teach you how local AI works.</li>
+    </ul>
+
+    <h2>A first model to try</h2>
+    <p>If you're using Ollama: <code>ollama run llama3.2:3b</code> (small,
+    fast, good for learning) or <code>ollama run llama3.1:8b</code> (smarter,
+    still runs on most laptops).</p>
+    <p>If you're using LM Studio: search the built-in browser for "Llama 3.2
+    3B Instruct GGUF" or "Llama 3.1 8B Instruct GGUF" and download a
+    <code>Q4_K_M</code> file.</p>
+  </main>
+</div>
+<footer class="site-footer">
+  <div class="inner">
+    <p>&copy; 2026 <strong>Asdale Dynamics, LLC</strong>. MIT License.
+    <a href="../LICENSE">View license</a>.</p>
+    <p class="disclaimer">Educational purposes only. This manual is not
+    medical advice.</p>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

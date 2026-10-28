@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Benefits — Running AI Locally vs. Cloud</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="inner">
+    <a href="index.html" class="site-brand">Asdale<span class="emph">Dynamics</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Open menu">&#9776;</button>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="choosing-models.html">Choosing models</a>
+      <a href="ram-vram-basics.html">RAM &amp; VRAM basics</a>
+      <a href="ollama-setup.html">Ollama setup</a>
+      <a href="lm-studio-setup.html">LM Studio setup</a>
+      <a href="privacy-benefits.html">Privacy benefits</a>
+      <a href="cost-comparison.html">Cost comparison</a>
+      <a href="when-to-use-each.html">When to use each</a>
+      <a href="glossary.html">Glossary</a>
+    </nav>
+  </div>
+</header>
+<div class="container">
+  <nav class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="choosing-models.html">Choosing models</a>
+    <a href="ram-vram-basics.html">RAM &amp; VRAM basics</a>
+    <a href="ollama-setup.html">Ollama setup</a>
+    <a href="lm-studio-setup.html">LM Studio setup</a>
+    <a href="privacy-benefits.html">Privacy benefits</a>
+    <a href="cost-comparison.html">Cost comparison</a>
+    <a href="when-to-use-each.html">When to use each</a>
+    <a href="glossary.html">Glossary</a>
+  </nav>
+
+  <main>
+    <h1>Privacy Benefits</h1>
+    <p>One of the best reasons to run AI locally is privacy: your
+    conversations, documents, and questions stay on your computer. This
+    section explains what that means, what it doesn't mean, and how to stay
+    safe.</p>
+
+    <h2>What "local" means for privacy</h2>
+    <p>When you run a model with Ollama or LM Studio:</p>
+    <ul>
+      <li>Your text never leaves your computer to reach the model.</li>
+      <li>No company reads your chats to train their models.</li>
+      <li>No account is tied to your conversations.</li>
+      <li>No internet connection is needed after the model is downloaded.</li>
+      <li>You can delete a model or a chat anytime, and it's gone from your machine.</li>
+    </ul>
+    <p>This makes local AI a good fit for personal journals, draft business
+    letters, client notes, health-related questions (for education, not
+    medical advice), and anything you wouldn't want posted online.</p>
+
+    <h2>What local AI does NOT protect you from</h2>
+    <p>Local AI is private, but it is not magic security:</p>
+    <ul>
+      <li><strong>Malware:</strong> only download models from trusted sources
+      (Ollama's library, Hugging Face, LM Studio's built-in browser). Don't
+      run random model files from strangers.</li>
+      <li><strong>Your computer's security:</strong> if someone else can log
+      into your computer, they can read your local chat history. Use a login
+      password and lock your screen.</li>
+      <li><strong>Backups:</strong> if you back up your computer to a cloud
+      service, your chat history may be included in that backup. Check what
+      your backup tool saves.</li>
+      <li><strong>Outputs you choose to share:</strong> copying an AI answer
+      into an email or website sends it wherever that email or website goes.</li>
+    </ul>
+
+    <h2>Cloud AI: the trade-off</h2>
+    <p>Cloud AI services are convenient and often more powerful, but they
+    usually:</p>
+    <ul>
+      <li>Require an account and sometimes a credit card.</li>
+      <li>Send your text to the provider's servers.</li>
+      <li>May use your inputs to train future models (check their settings;
+      many let you opt out).</li>
+      <li>Keep logs of your conversations for some period of time.</li>
+    </ul>
+    <p>Cloud is fine for public information and casual use. For personal,
+    client, or business-sensitive material, local-first is the safer
+    default.</p>
+
+    <section class="card warn">
+      <strong>A simple privacy rule:</strong> if you wouldn't read it out
+      loud in a public place, run it locally.
+    </section>
+  </main>
+</div>
+<footer class="site-footer">
+  <div class="inner">
+    <p>&copy; 2026 <strong>Asdale Dynamics, LLC</strong>. MIT License.
+    <a href="../LICENSE">View license</a>.</p>
+    <p class="disclaimer">Educational purposes only. This manual is not
+    medical advice.</p>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

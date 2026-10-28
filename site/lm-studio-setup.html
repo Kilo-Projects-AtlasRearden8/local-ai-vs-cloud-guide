@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LM Studio Setup — Running AI Locally vs. Cloud</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="inner">
+    <a href="index.html" class="site-brand">Asdale<span class="emph">Dynamics</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Open menu">&#9776;</button>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="choosing-models.html">Choosing models</a>
+      <a href="ram-vram-basics.html">RAM &amp; VRAM basics</a>
+      <a href="ollama-setup.html">Ollama setup</a>
+      <a href="lm-studio-setup.html">LM Studio setup</a>
+      <a href="privacy-benefits.html">Privacy benefits</a>
+      <a href="cost-comparison.html">Cost comparison</a>
+      <a href="when-to-use-each.html">When to use each</a>
+      <a href="glossary.html">Glossary</a>
+    </nav>
+  </div>
+</header>
+<div class="container">
+  <nav class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="choosing-models.html">Choosing models</a>
+    <a href="ram-vram-basics.html">RAM &amp; VRAM basics</a>
+    <a href="ollama-setup.html">Ollama setup</a>
+    <a href="lm-studio-setup.html">LM Studio setup</a>
+    <a href="privacy-benefits.html">Privacy benefits</a>
+    <a href="cost-comparison.html">Cost comparison</a>
+    <a href="when-to-use-each.html">When to use each</a>
+    <a href="glossary.html">Glossary</a>
+  </nav>
+
+  <main>
+    <h1>LM Studio Setup</h1>
+    <p>LM Studio is a free desktop app with a visual interface for finding,
+    downloading, and running AI models locally. It's a great choice if you
+    prefer clicking buttons over typing commands. No account, no API key
+    required.</p>
+
+    <h2>What LM Studio does</h2>
+    <ul>
+      <li>Browses and downloads models from Hugging Face</li>
+      <li>Runs models locally on your computer</li>
+      <li>Lets you chat with models, compare them side by side, and run a
+      local API server for other tools</li>
+      <li>Keeps your data on your machine unless you explicitly connect to a
+      cloud service</li>
+    </ul>
+
+    <h2>Step 1: Install LM Studio</h2>
+    <ol>
+      <li>Go to <a href="https://lmstudio.ai">lmstudio.ai</a> and download the
+      installer for Windows, macOS, or Linux.</li>
+      <li>Install it like any other app.</li>
+      <li>Open LM Studio. The first run may ask to download a small starter
+      model — you can accept or skip it.</li>
+    </ol>
+
+    <h2>Step 2: Download a model</h2>
+    <ol>
+      <li>Click the <strong>Discover</strong> or search icon in the left
+      sidebar.</li>
+      <li>Search for a beginner-friendly model, for example:<br>
+      <code>Llama 3.2 3B Instruct</code><br>
+      <code>Llama 3.1 8B Instruct</code></li>
+      <li>Pick a result labeled <strong>GGUF</strong> (that's the format LM
+      Studio runs best).</li>
+      <li>Choose a quantization — <code>Q4_K_M</code> is a good default — and
+      click <strong>Download</strong>.</li>
+    </ol>
+    <p>While it downloads, you can keep using the app.</p>
+
+    <h2>Step 3: Start chatting</h2>
+    <ol>
+      <li>Click the <strong>Chat</strong> icon in the left sidebar.</li>
+      <li>At the top of the chat pane, choose the model you just downloaded
+      from the model dropdown.</li>
+      <li>Type your message and press Enter.</li>
+    </ol>
+
+    <h2>Step 4: Adjust settings (optional)</h2>
+    <ul>
+      <li><strong>Context length:</strong> how much text the model remembers.
+      Default is fine for most chats; raise it if you're feeding long
+      documents.</li>
+      <li><strong>Temperature:</strong> randomness. Lower (0.3–0.7) for
+      focused answers; higher (0.8–1.2) for creative writing.</li>
+    </ul>
+
+    <h2>Comparing models side by side</h2>
+    <p>LM Studio lets you open two chat panes with different models and send
+    the same prompt to both — a handy way to see which model you prefer
+    without installing anything extra.</p>
+
+    <h2>Local API server (advanced, optional)</h2>
+    <p>LM Studio can start a local server at <code>http://localhost:1234</code>
+    that other programs can talk to. You don't need this for beginner use,
+    but it's there if you want to connect other tools later. Turn it on from
+    the Developer or local server section of the app.</p>
+  </main>
+</div>
+<footer class="site-footer">
+  <div class="inner">
+    <p>&copy; 2026 <strong>Asdale Dynamics, LLC</strong>. MIT License.
+    <a href="../LICENSE">View license</a>.</p>
+    <p class="disclaimer">Educational purposes only. This manual is not
+    medical advice.</p>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
